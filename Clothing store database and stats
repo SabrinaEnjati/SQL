@@ -1,0 +1,29 @@
+--Create a clothing store database
+
+CREATE TABLE store_items (id INTEGER PRIMARY KEY, item TEXT, color TEXT, quantity INTEGER, price INTEGER);
+
+INSERT INTO store_items VALUES (1, "tank top", "blue", 25, 15);
+INSERT INTO store_items VALUES (2, "belt", "black", 29, 10);
+INSERT INTO store_items VALUES (3, "hat", "green", 28, 12);
+INSERT INTO store_items VALUES (4, "scarf", "purple", 17, 12);
+INSERT INTO store_items VALUES (5, "slippers", "cream", 19, 11);
+INSERT INTO store_items VALUES (6, "pants", "blue", 34, 24);
+INSERT INTO store_items VALUES (7, "shirt", "white", 27, 12);
+INSERT INTO store_items VALUES (8, "shoes", "black", 28, 15);
+INSERT INTO store_items VALUES (9, "bandana", "red", 31, 8);
+INSERT INTO store_items VALUES (10, "socks", "orange", 26, 15);
+INSERT INTO store_items VALUES (11, "heels", "black", 17, 30);
+INSERT INTO store_items VALUES (12, "bracelet", "gold", 21, 30);
+INSERT INTO store_items VALUES (13, "sweater", "pink", 34, 21);
+INSERT INTO store_items VALUES (14, "cardigan", "gray", 23, 15);
+INSERT INTO store_items VALUES (15, "skirt", "red", 29, 20);
+
+--display the database in order by price.
+SELECT id FROM store_items ORDER BY price desc;
+
+--what is the total number of items sold in the store
+SELECT SUM(quantity) FROM store_items; 
+
+--what is the average price of an item in the store
+SELECT AVG(price) FROM store_items;
+
